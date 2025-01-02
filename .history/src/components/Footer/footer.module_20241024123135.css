@@ -1,0 +1,12 @@
+/* components/Footer/footer.module.css */
+
+.footer {
+  background-color: #f1f1f1; /* لون الخلفية */
+  padding: 20px; /* المسافة حول المحتوى */
+  text-align: center; /* محاذاة النص */
+  font-size: 18px; /* حجم الخط */
+  height: 100px; /* ارتفاع ثابت (يمكنك تعديل هذا حسب الحاجة) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* مركز المحتوى عموديًا */
+}

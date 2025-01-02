@@ -1,0 +1,42 @@
+/* header.module.css */
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 4px solid rgb(11, 235, 67);
+  background-color: rgb(185, 240, 208);
+  position: relative;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute; /* لضبط الأزرار في الأعلى */
+  top: 10px; /* مسافة من الأعلى */
+  right: 40px; /* مسافة من اليمين */
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 600;
+  align-items: center;
+  text-decoration: none; /* إزالة التسطير */
+}
+
+.btn:hover {
+  background-color: darkblue;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

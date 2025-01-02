@@ -1,0 +1,111 @@
+/* إخفاء القوائم الفرعية والروابط الرئيسية عند التصغير */
+.menu {
+  font-size: 40px;
+  font-weight: bold;
+  color: #202121;
+  cursor: pointer;
+  display: block; /* إظهار القائمة المنسدلة عند التصغير */
+}
+
+.navLinkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* إخفاء القوائم الرئيسية داخل .navLinks عند التصغير */
+.navLinks {
+  display: none;
+}
+
+/* عرض القوائم عندما تكون toggle = true */
+.navLinkWrapper.openMenu .navLinks {
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+/* تنسيق للقائمة الفرعية داخل "Departments" */
+.navLink.departments {
+  position: relative;
+  display: inline-block;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* وضع القائمة الفرعية أسفل العنصر */
+  left: 0;
+  background-color: rgb(227, 225, 225);
+  list-style-type: none;
+  padding-left: 20px;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.navLink.departments:hover .subMenu {
+  display: block;
+}
+
+.subMenu li {
+  padding: 8px 0;
+}
+
+.subMenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.subMenu li a:hover {
+  background-color: #bbb;
+}
+
+@media (max-width: 1080px) {
+  .logo {
+    display: none;
+  }
+
+  .navLinkWrapper {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: rgb(227, 225, 225);
+    display: none;
+  }
+
+  /* إظهار القائمة المنسدلة عند النقر */
+  .navLinkWrapper.openMenu {
+    display: flex;
+    background-color: rgb(227, 225, 225);
+  }
+
+  /* جعل القوائم الفرعية تظهر داخل القائمة المنسدلة */
+  .navLink.departments {
+    position: relative;
+  }
+
+  .subMenu {
+    display: none;
+    position: relative;
+  }
+
+  .navLink.departments:hover .subMenu {
+    display: block;
+  }
+
+  .navLink {
+    padding: 0;
+    margin: 12px 0;
+  }
+}

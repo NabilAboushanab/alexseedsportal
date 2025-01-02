@@ -1,0 +1,28 @@
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute; /* لجعلها في أعلى اليمين */
+  top: 20px; /* إبعاد الزر عن الحافة العلوية */
+  right: 40px; /* محاذاة الزر إلى اليمين */
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: darkblue;
+}
+
+.header {
+  position: relative; /* لضمان أن .right تكون موجهة بالنسبة للهيدر */
+  padding: 20px;
+}

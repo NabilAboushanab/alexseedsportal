@@ -1,0 +1,29 @@
+/* components/Footer/footer.module.css */
+
+.footer {
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #38a169; /* لون الخلفية */
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    color: white;
+    z-index: 100;
+  }
+  
+  .marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite; /* تحريك النص */
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+  

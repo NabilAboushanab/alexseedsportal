@@ -1,0 +1,124 @@
+/* التنسيق الأساسي */
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 4px solid rgb(11, 235, 67);
+  background-color: rgb(185, 240, 208);
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(15, 176, 36);
+}
+
+.menu {
+  font-size: 40px;
+  font-weight: bold;
+  color: #202121;
+  cursor: pointer;
+  display: none;
+}
+
+.navLinkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 12px;
+}
+
+/* عند التصغير */
+@media (max-width: 1080px) {
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    display: block; /* عرض زر القائمة عند التصغير */
+  }
+
+  .navLinkWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(227, 225, 225);
+    display: none; /* إخفاء القوائم بشكل افتراضي عند التصغير */
+  }
+
+  /* عند النقر على القائمة، تظهر القوائم */
+  .openMenu {
+    display: flex; /* عرض القوائم عند النقر على "Menu" */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .navLink {
+    padding: 12px 0;
+    margin: 12px 0;
+  }
+}
+
+/* القوائم الفرعية (SubMenu) */
+.navLink.departments {
+  position: relative;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* وضع القائمة الفرعية أسفل العنصر */
+  left: 0;
+  background-color: rgb(227, 225, 225);
+  list-style-type: none;
+  padding-left: 20px;
+  min-width: 200px;
+}
+
+.navLink.departments:hover .subMenu {
+  display: block;
+}
+
+.subMenu li {
+  padding: 8px 0;
+}
+
+.subMenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.subMenu li a:hover {
+  background-color: #bbb;
+}

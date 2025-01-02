@@ -1,0 +1,67 @@
+/* header.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1f2937; /* لون الخلفية */
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.navLinkWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navLink:hover {
+  color: #a1a1aa; /* لون التظليل عند التمرير */
+}
+
+/* تنسيقات خاصة بالشاشات الصغيرة */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  .navLinkWrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .openMenu {
+    display: flex;
+  }
+}

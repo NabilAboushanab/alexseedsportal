@@ -1,0 +1,29 @@
+/* components/Footer/footer.module.css */
+
+.footer {
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #38a169; /* لون الخلفية */
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* محاذاة النص لليسار */
+    overflow: hidden; /* إخفاء النص الزائد */
+    color: white; /* لون النص */
+    z-index: 100; /* تأكد من ظهور الفوتر فوق أي عناصر أخرى */
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    color: white; /* تأكد من أن النص لونه مناسب للخلفية */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}

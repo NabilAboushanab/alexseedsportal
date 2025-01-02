@@ -1,0 +1,24 @@
+/* components/Footer/footer.module.css */
+.footer {
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #38a169; /* نفس لون bg-green-400 */
+    padding-left: 1rem;
+    display: flex; /* تأكد من أن footer يستخدم flex */
+    align-items: center; /* محاذاة العناصر داخل الفوتر */
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}

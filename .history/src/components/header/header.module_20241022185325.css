@@ -1,0 +1,88 @@
+.header {
+  height: 100px; /* ارتفاع الهيدر */
+  display: flex;
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  padding: 0 40px; /* إضافة مساحة من الجانبين */
+  border-bottom: 4px solid rgb(11, 235, 67); /* خط سفلي */
+  background-color: rgb(185, 240, 208); /* لون خلفية الهيدر */
+  position: relative;
+}
+
+.navbar {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  width: 100%; /* ملء العرض الكامل */
+}
+
+.logo {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  font-size: 24px; /* حجم خط الشعار */
+  font-weight: bold; /* سمك خط الشعار */
+  color: rgb(15, 176, 36); /* لون الشعار */
+}
+
+.menu {
+  font-size: 40px; /* حجم الأيقونة */
+  font-weight: bold; /* سمك الأيقونة */
+  color: #202121; /* لون الأيقونة */
+  cursor: pointer; /* تغيير شكل المؤشر */
+  display: none; /* إخفاء الأيقونة على الشاشات الكبيرة */
+}
+
+.navLinkWrapper {
+  position: absolute; /* تعيين الوضع المطلق */
+  left: 0; /* محاذاة مع الجانب الأيسر */
+  top: 100%; /* يظهر أسفل الهيدر */
+  width: 100vw; /* ملء العرض الكامل للشاشة */
+  height: 100vh; /* ملء ارتفاع الشاشة بالكامل */
+  background-color: rgb(227, 225, 225); /* لون خلفية القائمة المنسدلة */
+  display: flex; /* تصميم العناصر في صف */
+  flex-direction: column; /* عرض العناصر عموديًا */
+  align-items: center; /* محاذاة العناصر في الوسط */
+  justify-content: center; /* مركز العناصر عموديًا */
+  transition: opacity 0.3s ease; /* تأثير الانتقال للشفافية */
+  opacity: 0; /* إخفاء القائمة الافتراضية */
+  pointer-events: none; /* منع التفاعل مع العناصر المخفية */
+  z-index: 100; /* ضبط قيمة z-index */
+}
+
+.navLinkWrapper.open {
+  opacity: 1; /* جعل القائمة مرئية */
+  pointer-events: auto; /* السماح بالتفاعل مع العناصر */
+}
+
+.navLinks {
+  display: flex; /* تصميم العناصر في صف */
+  list-style: none; /* إزالة العلامات من القائمة */
+  margin: 0; /* إزالة الهوامش */
+}
+
+.navLink {
+  font-size: 20px; /* حجم خط الروابط */
+  font-weight: 600; /* سمك خط الروابط */
+  margin: 12px 0; /* إضافة مسافة عمودية بين الروابط */
+}
+
+/* بقية التنسيقات مثل .right، .btn، .submenu كما كانت */
+
+@media (max-width: 1080px) {
+  .logo {
+    display: none; /* إخفاء الشعار على الشاشات الصغيرة */
+  }
+
+  .menu {
+    display: block; /* عرض أيقونة القائمة */
+  }
+
+  .navLinkWrapper {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* تصميم القائمة المنسدلة */
+  }
+
+  /* Animation for opening menu */
+  .openMenu {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* إظهار القائمة المنسدلة بالكامل */
+  }
+}

@@ -1,0 +1,114 @@
+.header {
+  height: 100px; /* ارتفاع الهيدر */
+  display: flex;
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  padding: 0 40px; /* إضافة مساحة من الجانبين */
+  border-bottom: 4px solid rgb(11, 235, 67); /* خط سفلي */
+  background-color: rgb(185, 240, 208); /* لون خلفية الهيدر */
+  position: relative;
+}
+
+.navbar {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  width: 100%; /* ملء العرض الكامل */
+}
+
+.logo {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  font-size: 24px; /* حجم خط الشعار */
+  font-weight: bold; /* سمك خط الشعار */
+  color: rgb(15, 176, 36); /* لون الشعار */
+}
+
+.menu {
+  font-size: 40px; /* حجم الأيقونة */
+  font-weight: bold; /* سمك الأيقونة */
+  color: #202121; /* لون الأيقونة */
+  cursor: pointer; /* تغيير شكل المؤشر */
+  display: none; /* إخفاء الأيقونة على الشاشات الكبيرة */
+}
+
+.navLinkWrapper {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  position: absolute; /* تعيين الوضع المطلق */
+  left: 0; /* محاذاة مع الجانب الأيسر */
+  top: 100%; /* يظهر أسفل الهيدر */
+  width: 100%; /* ملء العرض الكامل */
+  background-color: rgb(227, 225, 225); /* لون خلفية القائمة المنسدلة */
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* إخفاء القائمة */
+  transition: all 0.5s ease-in; /* تأثير انتقال سلس */
+  z-index: 100; /* ضبط قيمة z-index */
+}
+
+.openMenu {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* عرض القائمة */
+}
+
+.navLinks {
+  display: flex; /* تصميم العناصر في صف */
+  list-style: none; /* إزالة العلامات من القائمة */
+  margin-left: 30px; /* إضافة مساحة من اليسار */
+}
+
+.navLink {
+  font-size: 20px; /* حجم خط الروابط */
+  font-weight: 600; /* سمك خط الروابط */
+  margin: 0 12px; /* إضافة مسافة بين الروابط */
+  position: relative; /* ضبط الوضع النسبي للروابط */
+}
+
+.submenu {
+  position: absolute; /* تعيين الوضع المطلق */
+  top: 100%; /* يظهر أسفل العنصر الرئيسي */
+  left: 0; /* محاذاة مع العنصر الرئيسي */
+  background-color: #fff; /* لون خلفية القائمة الفرعية */
+  list-style: none; /* إزالة العلامات من القائمة الفرعية */
+  padding: 10px; /* إضافة مساحة داخل القائمة الفرعية */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للقائمة الفرعية */
+  display: none; /* إخفاء القائمة الفرعية */
+  flex-direction: column; /* عرض العناصر عموديًا */
+}
+
+.submenuRight {
+  position: absolute; /* تعيين الوضع المطلق */
+  top: 0; /* محاذاة مع أعلى العنصر الرئيسي */
+  left: 100%; /* وضعها على يمين العنصر الرئيسي */
+  background-color: #fff; /* لون خلفية القائمة الفرعية */
+  list-style: none; /* إزالة العلامات من القائمة الفرعية */
+  padding: 10px; /* إضافة مساحة داخل القائمة الفرعية */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للقائمة الفرعية */
+  display: none; /* إخفاء القائمة الفرعية */
+  flex-direction: column; /* عرض العناصر عموديًا */
+}
+
+.navLink:hover .submenu,
+.navLink:hover .submenuRight {
+  display: flex; /* إظهار القائمة الفرعية */
+}
+
+@media (max-width: 1080px) {
+  .logo {
+    display: none; /* إخفاء الشعار على الشاشات الصغيرة */
+  }
+  .menu {
+    display: block; /* عرض أيقونة القائمة */
+  }
+  .navLinks {
+    flex-direction: column; /* عرض العناصر عموديًا */
+    padding: 0;
+  }
+  .navLinkWrapper {
+    position: absolute; /* تعيين الوضع المطلق */
+    top: 100%; /* يظهر أسفل الهيدر */
+    left: 0; /* محاذاة مع الجانب الأيسر */
+    width: 100%; /* ملء العرض الكامل */
+    background-color: rgb(227, 225, 225); /* لون خلفية القائمة المنسدلة */
+    display: flex; /* عرض القائمة */
+    flex-direction: column; /* عرض العناصر عموديًا */
+  }
+}

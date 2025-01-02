@@ -1,0 +1,46 @@
+/* إضافة تنسيق للقائمة الفرعية تحت عنصر Departments */
+.navLink.departments {
+  position: relative;
+  display: inline-block;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* لوضع القائمة الفرعية أسفل العنصر الرئيسي */
+  left: 0;
+  background-color: rgb(227, 225, 225);
+  list-style-type: none;
+  padding-left: 20px;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.navLink.departments:hover .subMenu {
+  display: block;
+}
+
+.subMenu li {
+  padding: 8px 0;
+}
+
+.subMenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.subMenu li a:hover {
+  background-color: #bbb;
+}
+
+@media (max-width: 1080px) {
+  .navLinkWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}

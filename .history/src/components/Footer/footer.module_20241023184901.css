@@ -1,0 +1,17 @@
+.footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333; /* لون خلفية داكن */
+  color: white; /* لون النص */
+  padding: 0 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.marquee {
+  font-weight: bold;
+}

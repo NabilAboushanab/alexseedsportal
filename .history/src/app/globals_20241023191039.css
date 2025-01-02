@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* إعدادات الجذر */
+:root {
+  --bg-color: #efefef; /* اللون الخلفي الافتراضي */
+}
+
+/* إعدادات الجسم */
+body {
+  background-color: var(--bg-color); /* استخدام اللون الخلفي المحدد */
+}
+
+/* إعدادات عامة لجميع العناصر */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* تأكد من أن جميع العناصر تأخذ في الاعتبار padding والـ border */
+}
+
+/* تخصيصات داخل مستوى utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance; /* تنسيق النص لتوزيع النص بشكل متوازن */
+  }
+}
+
+/* فئة لتحديد ارتفاع معين */
+.overflow-hight {
+  height: calc(100vh - 150px); /* حساب ارتفاع عنصر استنادًا إلى ارتفاع العرض الكامل مطروحًا منه 150 بكسل */
+}

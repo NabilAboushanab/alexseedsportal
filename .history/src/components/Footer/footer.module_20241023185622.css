@@ -1,0 +1,30 @@
+.footer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* لون خلفية داكن */
+    color: white; /* لون النص */
+    padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* إخفاء أي محتوى زائد عن الحدود */
+  }
+  
+  .marquee {
+    display: inline-block;
+    white-space: nowrap; /* منع النص من الانتقال إلى سطر جديد */
+    animation: marquee 10s linear infinite; /* تطبيق الحركة */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%); /* النص يبدأ من خارج الشاشة */
+    }
+    100% {
+      transform: translateX(-100%); /* النص ينتهي خارج الشاشة في الجهة الأخرى */
+    }
+  }
+  

@@ -1,0 +1,14 @@
+/* components/Footer/footer.module.css */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000; /* تغيير لون الخلفية إلى الأسود */
+    padding: 20px; /* المسافة حول المحتوى */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5); /* ظل خفيف */
+    color: white; /* تغيير لون النص إلى الأبيض لتباين أفضل */
+    font-size: 18px; /* حجم الخط */
+}

@@ -1,0 +1,197 @@
+/* Global header styles */
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 4px solid rgb(11, 235, 67);
+  background-color: rgb(185, 240, 208);
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(15, 176, 36);
+}
+
+.menu {
+  font-size: 40px;
+  font-weight: bold;
+  color: #202121;
+  cursor: pointer;
+  display: none;
+}
+
+.navLinkWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin-left: 30px;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 12px;
+  position: relative;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: darkblue;
+}
+
+.navLink:hover {
+  color: darkblue;
+}
+
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 10px;
+ 
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.submenuRight {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: transparent;
+  list-style: circle;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.submenu li {
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.submenu li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navLink:hover .submenu,
+.navLink:hover .submenuRight {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1080px) {
+  .logo {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .navLinkWrapper {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: rgb(227, 225, 225);
+    transition: all 0.5s ease-in;
+    z-index: 100;
+  }
+
+  .navLinks {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navLink {
+    padding: 0;
+    margin: 12px 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+  }
+
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .submenuRight {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .navLink:hover .submenu,
+  .navLink:hover .submenuRight {
+    display: block;
+  }
+
+  .submenu li a,
+  .submenuRight li a {
+    font-size: 16px;
+  }
+
+  .openMenu .submenu,
+  .openMenu .submenuRight {
+    display: flex;
+  }
+}

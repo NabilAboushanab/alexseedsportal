@@ -1,0 +1,103 @@
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 4px solid rgb(11, 235, 67);
+  background-color: rgb(185, 240, 208);
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(15, 176, 36);
+}
+
+.menu {
+  font-size: 40px;
+  font-weight: bold;
+  color: #202121;
+  cursor: pointer;
+  display: none;
+}
+
+.navLinks {
+  margin-left: 30px;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 12px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+.navLink:hover {
+  color: darkblue;
+}
+
+/* CSS Styling for the Submenu */
+.navLinkDropdown {
+  position: relative; /* Ensures submenu is positioned relative to its parent */
+}
+
+.subMenu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positions it directly below the parent link */
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  z-index: 10; /* Ensures it appears above other elements */
+}
+
+.subMenu li {
+  padding: 5px 20px;
+}
+
+.subMenu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navLinkDropdown:hover .subMenu {
+  display: block; /* Shows the submenu on hover */
+}
+
+.subMenu li a:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,175 @@
+.header {
+  height: 100px; /* ارتفاع الهيدر */
+  display: flex;
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  padding: 0 40px; /* إضافة مساحة من الجانبين */
+  border-bottom: 4px solid rgb(11, 235, 67); /* خط سفلي */
+  background-color: rgb(185, 240, 208); /* لون خلفية الهيدر */
+  position: relative;
+}
+
+.navbar {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  justify-content: space-between; /* توزيع العناصر بالتساوي */
+  width: 100%; /* ملء العرض الكامل */
+}
+
+.logo {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  font-size: 24px; /* حجم خط الشعار */
+  font-weight: bold; /* سمك خط الشعار */
+  color: rgb(15, 176, 36); /* لون الشعار */
+}
+
+.menu {
+  font-size: 40px; /* حجم الأيقونة */
+  font-weight: bold; /* سمك الأيقونة */
+  color: #202121; /* لون الأيقونة */
+  cursor: pointer; /* تغيير شكل المؤشر */
+  display: none; /* إخفاء الأيقونة على الشاشات الكبيرة */
+}
+
+.navLinkWrapper {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+}
+
+.navLinks {
+  display: flex; /* تصميم العناصر في صف */
+  list-style: none; /* إزالة العلامات من القائمة */
+  margin-left: 30px; /* إضافة مساحة من اليسار */
+}
+
+.navLink {
+  font-size: 20px; /* حجم خط الروابط */
+  font-weight: 600; /* سمك خط الروابط */
+  margin: 0 12px; /* إضافة مسافة بين الروابط */
+  position: relative; /* ضبط الوضع النسبي للروابط */
+}
+
+.right {
+  display: flex; /* تصميم العناصر في صف */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+  gap: 10px; /* إضافة مساحة بين العناصر */
+}
+
+.btn {
+  cursor: pointer; /* تغيير شكل المؤشر */
+  background-color: green; /* لون الخلفية */
+  color: white; /* لون النص */
+  border-radius: 10px; /* زوايا دائرية */
+  padding: 5px 10px; /* إضافة مساحة داخل الزر */
+  font-size: 21px; /* حجم خط الزر */
+  font-weight: 600; /* سمك خط الزر */
+  align-items: center; /* محاذاة العناصر في الوسط عموديًا */
+}
+
+.btn:hover {
+  background-color: darkblue; /* تغيير لون الخلفية عند التحويم */
+}
+
+.navLink:hover {
+  color: darkblue; /* تغيير لون الروابط عند التحويم */
+}
+
+/* Submenu Styles */
+.submenu {
+  position: absolute; /* تعيين الوضع المطلق */
+  top: 100%; /* يظهر أسفل العنصر الرئيسي */
+  left: 0; /* محاذاة مع العنصر الرئيسي */
+  background-color: #fff; /* لون خلفية القائمة الفرعية */
+  list-style: none; /* إزالة العلامات من القائمة الفرعية */
+  padding: 10px; /* إضافة مساحة داخل القائمة الفرعية */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للقائمة الفرعية */
+  display: flex; /* تصميم العناصر في صف */
+  flex-direction: column; /* عرض العناصر عموديًا */
+  z-index: 200; /* زيادة قيمة z-index لتكون فوق العناصر الأخرى */
+  transition: opacity 0.3s ease; /* تأثير الانتقال للشفافية */
+  opacity: 0; /* إخفاء القائمة الفرعية */
+  pointer-events: none; /* منع التفاعل مع العناصر المخفية */
+}
+
+.submenuRight {
+  position: absolute; /* تعيين الوضع المطلق */
+  top: 0; /* محاذاة مع أعلى العنصر الرئيسي */
+  left: 100%; /* وضعها على يمين العنصر الرئيسي */
+  background-color: #fff; /* لون خلفية القائمة الفرعية */
+  list-style: none; /* إزالة العلامات من القائمة الفرعية */
+  padding: 10px; /* إضافة مساحة داخل القائمة الفرعية */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للقائمة الفرعية */
+  display: flex; /* تصميم العناصر في صف */
+  flex-direction: column; /* عرض العناصر عموديًا */
+  z-index: 200; /* زيادة قيمة z-index لتكون فوق العناصر الأخرى */
+  transition: opacity 0.3s ease; /* تأثير الانتقال للشفافية */
+  opacity: 0; /* إخفاء القائمة الفرعية */
+  pointer-events: none; /* منع التفاعل مع العناصر المخفية */
+}
+
+.submenu li {
+  padding: 5px 10px; /* إضافة مساحة داخل عناصر القائمة الفرعية */
+  white-space: nowrap; /* يمنع كسر الكلمات */
+}
+
+.submenu li a {
+  color: #000; /* لون النص في القائمة الفرعية */
+  text-decoration: none; /* إزالة التزيين من النص */
+}
+
+/* Display submenu when parent is hovered */
+.navLink:hover .submenu,
+.navLink:hover .submenuRight {
+  opacity: 1; /* جعل القائمة الفرعية مرئية */
+  pointer-events: auto; /* السماح بالتفاعل مع العناصر */
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .logo {
+    display: none; /* إخفاء الشعار على الشاشات الصغيرة */
+  }
+
+  .menu {
+    display: block; /* عرض أيقونة القائمة */
+  }
+
+  .navLinkWrapper {
+    position: absolute; /* تعيين الوضع المطلق */
+    left: 0; /* محاذاة مع الجانب الأيسر */
+    top: 100%; /* يظهر أسفل الهيدر */
+    width: 125%; /* ملء العرض الكامل */
+    background-color: inherit; /* استخدام خلفية الورقة */
+    transition: all 0.5s ease-in; /* تأثير انتقال سلس */
+    z-index: 100; /* ضبط قيمة z-index */
+    background-color: rgb(227, 225, 225); /* لون خلفية القائمة المنسدلة */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* تصميم القائمة المنسدلة */
+    height: 
+  }
+
+  .navLinks {
+    padding-left: 10px; /* إضافة مساحة داخل القائمة */
+    padding-bottom: 10px; /* إضافة مساحة من الأسفل */
+    margin-left: 0; /* إعادة تعيين المسافة */
+    display: flex; /* تصميم العناصر في صف */
+    flex-direction: column; /* عرض العناصر عموديًا */
+    align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+    justify-content: center; /* مركز العناصر عموديًا */
+  }
+
+  .navLink {
+    padding: 0; /* إزالة المساحة الداخلية */
+    margin: 12px 0; /* إضافة مسافة عمودية بين الروابط */
+  }
+
+  /* تقليل حجم الخط في القائمة الفرعية */
+  .submenu li a, .submenuRight li a {
+    font-size: 16px; /* حجم الخط في القائمة الفرعية */
+  }
+
+  /* Animation for opening menu */
+  .openMenu {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* إظهار القائمة المنسدلة بالكامل */
+  }
+}

@@ -1,0 +1,1 @@
+// src/app/Footer.tsx

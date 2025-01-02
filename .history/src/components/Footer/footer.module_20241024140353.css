@@ -1,0 +1,21 @@
+/* src/components/Footer/footer.module.css */
+.footer {
+    position: fixed; /* يبقي الفوتر في أسفل الصفحة */
+    bottom: 0; /* يحدد موقع الفوتر أسفل الصفحة */
+    left: 0; /* يحدد موضع الفوتر إلى الجهة اليسرى */
+    width: 100%; /* يمتد الفوتر عبر عرض الصفحة بالكامل */
+    height: 80px; /* ارتفاع الفوتر */
+    background-color: #333; /* لون خلفية داكن للفوتر */
+    color: #fff; /* لون النص أبيض لتباين أفضل */
+    padding: 10px 20px; /* إضافة حشوة مع تباعد أفقي */
+    display: flex; /* استخدام الفليكس لتوسيع الفوتر */
+    align-items: center; /* محاذاة النص عموديًا في المنتصف */
+    justify-content: center; /* محاذاة النص أفقيًا في المنتصف */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); /* ظل خفيف في الجزء العلوي للفوتر */
+    font-size: 16px; /* حجم خط مناسب للنص */
+    transition: background-color 0.3s; /* تأثير سلس لتغيير لون الخلفية */
+}
+
+.footer:hover {
+    background-color: #444; /* تغيير لون الخلفية عند تمرير الفأرة */
+}

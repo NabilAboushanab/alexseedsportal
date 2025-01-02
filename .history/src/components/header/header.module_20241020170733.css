@@ -1,0 +1,46 @@
+/* القائمة العامة */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* القوائم المنسدلة */
+.dropdownParent {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+.dropdownLink {
+    color: #333;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdownLink:hover {
+    background-color: #ddd;
+}
+
+.navLink:hover .dropdown {
+    display: block;
+}
+
+/* تعديل لـ @media لتصميم متجاوب */
+@media (max-width: 1080px) {
+    .dropdown {
+        position: relative;
+        background-color: inherit;
+        box-shadow: none;
+    }
+}

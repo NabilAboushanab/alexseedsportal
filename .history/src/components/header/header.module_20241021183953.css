@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* لتوزيع المسافات بين العناصر */
+  align-items: center;
+  padding: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* هذا يضمن أن العناصر في .right تذهب إلى أقصى اليمين */
+}
+
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: darkblue;
+}

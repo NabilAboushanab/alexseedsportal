@@ -1,0 +1,30 @@
+/* CSS for Submenu */
+.subMenu {
+  padding-left: 20px;
+  background-color: #f0f0f0;
+  list-style-type: none;
+  position: absolute;  /* Absolute positioning */
+  top: 100%; /* Position below the parent element */
+  left: 0; /* Align to the left of the parent */
+  display: none;
+  z-index: 10;  /* Ensure it appears above other elements */
+  min-width: 200px; /* Optional, defines a minimum width */
+}
+
+.navLink:hover .subMenu {
+  display: block;  /* Display submenu on hover */
+}
+
+.subMenu li {
+  padding: 8px;
+  background-color: #ddd;
+}
+
+.subMenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.subMenu li a:hover {
+  background-color: #bbb;
+}

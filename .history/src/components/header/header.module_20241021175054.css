@@ -1,0 +1,25 @@
+/* CSS for Submenu */
+.subMenu {
+  padding-left: 20px;
+  background-color: #f0f0f0;
+  list-style-type: none;
+  display: none;
+}
+
+.navLink:hover .subMenu {
+  display: block;
+}
+
+.subMenu li {
+  padding: 8px;
+  background-color: #ddd;
+}
+
+.subMenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.subMenu li a:hover {
+  background-color: #bbb;
+}
